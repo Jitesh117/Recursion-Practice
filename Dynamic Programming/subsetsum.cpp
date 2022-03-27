@@ -15,22 +15,21 @@ int main()
     bool t[n+1][sum+1];
   for (int i = 0; i <= n; i++) { 
 		for (int j = 0; j <= sum; j++) { 
-			if (i == 0)// when array(i) is empty than there is no meaning of sum of elements so return false
+			if (i == 0)
 				t[i][j] = false;
-			if (j == 0) // when sum(j) is zero and there is always a chance of empty subset so return it as true;
+			if (j == 0) 
 				t[i][j] = true;
 		}
 	}
 
-        for (int i = 1; i <= n; i++) {
-		for (int j = 1; j <= sum; j++) {
-			if (arr[i - 1] <= j) 
-       
-				t[i][j] = t[i - 1][j - arr[i - 1]] || t[i - 1][j]; 
-			else 
-				t[i][j] = t[i - 1][j];
-		}
-	}
+        for(int i = 1;i<=n;i++)
+            for(int j = 1;j<=sum;j++)
+            {
+                if(arr[i-1]<=j)
+                 t[i][j] = (t[i-1][j - arr[i-1]] || t[i-1][j]);
+                else
+                 t[i][j] = t[i-1][j];
+            }
 
     t[n][sum] ? cout<< "True\n" : cout << "False\n";
     return 0;
