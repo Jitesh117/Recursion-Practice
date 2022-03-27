@@ -21,7 +21,7 @@ int main()
 {
     memset(t,-1,sizeof(t));
     int n,W;
-    cout <<"Enter 123 the number of items :\n";
+    cout <<"Enter the number of items :\n";
     cin >> n;
     int wt[n],val[n];
     cout <<"Enter the weights:\n";
