@@ -7,9 +7,9 @@ bool IsSubsetsum(int arr[],int sum,int n)
         for(int j = 0;j<=sum;j++)
         {
             if( i == 0)
-             t[i][j] == false;
+             t[i][j] = false;
             if( j == 0)
-             t[i][j] == true;
+             t[i][j] = true;
         }
     for(int i = 1;i<=n;i++)
      for(int j = 1;j<=sum;j++)
