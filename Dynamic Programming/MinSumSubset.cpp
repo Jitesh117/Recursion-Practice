@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int minsubset(int arr[], int Range,int n)
-{   bool t[n][Range];
+{   bool t[n+1][Range+1];
     for(int i = 0;i<=n;i++)
         for(int j = 0;j<=Range;j++)
         {
