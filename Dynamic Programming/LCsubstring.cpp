@@ -19,10 +19,14 @@ int main()
           if(x[i-1] == y[j-1])
               t[i][j] = 1+t[i-1][j-1];
           else
-              t[i][j] = max(t[i-1][j],t[i][j-1]);
+              t[i][j] = 0;
 
         }
+        int mx = INT_MIN;
+    for(int i = 0;i<=n;i++)
+        for(int j = 0;j<=m;j++)
+         mx = max(mx,t[i][j]);
         
-    cout << "LCS is:\n" << t[n][m];
+    cout << "LCS is:\n" << mx;
     return 0;
 }
