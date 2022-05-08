@@ -21,7 +21,7 @@ int main()
     cout <<"Enter the elements of the array:\n";
     for(int i  =0;i<n;i++)
         cin >> arr[i];
-    // solve(arr,1,n-1);
+
     cout <<"minimum cost of multiplication:\n";
     cout << Solve(arr,1,n-1);
 
