@@ -4,11 +4,12 @@ void solve(vector<int>& v,int ind,vector<int> temp,int sum)
 {
     if(ind == v.size())
     {
-        if(sum == 0){if(temp.size() == 0)
+        if(sum == 0)
+        {if(temp.size() == 0)
             cout << "{}";
-        for(auto i:temp)
-            cout << i << " ";
-            cout << endl;
+            for(auto i:temp)
+                cout << i << " ";
+                cout << endl;
         }
             return;
         
