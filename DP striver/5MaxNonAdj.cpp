@@ -38,7 +38,21 @@ int main()
         int nontake = dp[i - 1];
         dp[i] = max(take, nontake);
     }
+
+    // Space optimisation
+    int prev2 = 0, prev = nums[0];
+    for (int i = 1; i < n; i++)
+    {
+        int take = nums[i];
+        if (i > 1)
+            take += prev2;
+        int nontake = prev;
+        int curi = max(take, nontake);
+        prev2 = prev;
+        prev = curi;
+    }
     // cout << "Max sum of non adjacent elements is: " << maxnonadj(nums, dp);
-    cout << "Max sum of non adjacent elements is: " << dp[n-1];
+    // cout << "Max sum of non adjacent elements is: " << dp[n - 1];
+    cout << "Max sum of non adjacent elements is: " << prev;
     return 0;
 }
