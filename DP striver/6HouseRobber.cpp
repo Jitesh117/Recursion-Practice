@@ -41,7 +41,7 @@ int main()
 
     // Space optimisation
     int prev2 = 0, prev = nums[0];
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i < n-1; i++)
     {
         int take = nums[i];
         if (i > 1)
