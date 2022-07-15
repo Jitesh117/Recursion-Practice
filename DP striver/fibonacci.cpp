@@ -13,6 +13,16 @@ int main()
     int n;
     cin >> n;
     vector<int> dp(n + 1, -1);
-    cout << fib(n, dp);
+    // cout << fib(n, dp) << endl;
+    // Space optimisation
+    int prev2 = 0;
+    int prev1 = 1;
+    for (int i = 2; i <= n; i++)
+    {
+        int curi = prev1 + prev2;
+        prev2 = prev1;
+        prev1 = curi;
+    }
+    cout << prev1;
     return 0;
 }
