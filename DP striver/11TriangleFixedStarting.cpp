@@ -37,7 +37,7 @@ int main()
         dp[n - 1][j] = a[n - 1][j];
     for (int i = n - 2; i >= 0; i--)
     {
-        for (int j = i; j >= 0; j++)
+        for (int j = i; j >= 0; j--)
         {
             int d = a[i][j] + dp[i + 1][j];
             int dg = a[i][j] + dp[i + 1][j + 1];
