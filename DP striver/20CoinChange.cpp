@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-class Memoization
+class Tabulation
 {
 public:
     int coinChange(vector<int> &coins, int amount)
@@ -26,7 +26,7 @@ public:
         return dp[n - 1][amount];
     }
 };
-class Tabulation
+class Recursive
 {
 public:
     int coinChange(vector<int> &coins, int amount)
